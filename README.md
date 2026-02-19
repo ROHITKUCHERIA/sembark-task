@@ -19,10 +19,10 @@ cd url-shortener
 ## SetUp Database
 
 Open .env file and update database configuration:
-
+```bash
 DB_CONNECTION=sqlite
 DB_DATABASE=C:\Users\RohitKucheria\Downloads\url-shortner\url-shortner\database\database.sqlite      -- absolute path
-
+```
 ## Clear Configuration Cache
 ```bash
 php artisan config:clear
