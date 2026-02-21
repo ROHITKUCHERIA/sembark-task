@@ -29,6 +29,13 @@ DB_DATABASE=sembark_task
 DB_USERNAME=root
 DB_PASSWORD=
 ```
+
+## Run Seeder File
+```bash
+
+php artisan db:seed
+```
+
 ## Clear Configuration Cache
 ```bash
 php artisan config:clear
