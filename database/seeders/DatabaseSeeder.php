@@ -13,15 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $now = Carbon::now();
 
-        DB::table('users')->insert([
-            'name'       => 'Super Admin',
-            'email'      => 'superadmin@example.com',
-            'password'   => Hash::make('password'),
-            'company_id' => null,
-            'role'       => 'SuperAdmin',
-            'created_at' => $now,
-            'updated_at'  => $now
-        ]);
 
         $peopleTechId = DB::table('companies')->insertGetId([
             'name'           => 'PeopleTech Groups',
@@ -44,9 +35,19 @@ class DatabaseSeeder extends Seeder
 
         DB::table('users')->insert([
             [
+                'name' => 'Super Admin',
+                'email' => 'superadmin@example.com',
+                'password' => Hash::make('password'),
+                'company_id' => null,
+                'role' => 'SuperAdmin',
+                'created_at' => $now,
+                'updated_at' => $now
+            ],
 
-                'name'       => 'Admin One',
-                'email'      => 'admin1@example.com',
+            
+            [
+                'name' => 'Admin One',
+                'email' => 'admin1@example.com',
                 'password'   => Hash::make('password'),
                 'company_id' => $peopleTechId,
                 'role'       => 'Admin',
@@ -64,11 +65,7 @@ class DatabaseSeeder extends Seeder
                 'role'       => 'Admin',
                 'created_at' => $now,
                 'updated_at' => $now
-            ]
-        ]);
-
-
-        DB::table('users')->insert([
+            ],
             [
                 'name'       => 'Member One',
                 'email'      => 'member1@example.com',
@@ -97,7 +94,7 @@ class DatabaseSeeder extends Seeder
                 'role'       => 'Member',
                 'created_at' => $now,
                 'updated_at' => $now
-            ]
+            ],
         ]);
 
     }
