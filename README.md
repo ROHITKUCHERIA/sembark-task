@@ -6,7 +6,7 @@ A Laravel-based URL shortening service with role-based access control.
 
 - PHP >= 8.2
 - Composer
-- SQLite
+- MySQL
 - Laravel 10.x
 
 ## Installation
@@ -18,10 +18,16 @@ cd url-shortener
 ```
 ## SetUp Database
 
+Create Database name sembark_task into your local using phpmyadmin or mysql work banch and then 
+
 Open .env file and update database configuration:
 ```bash
-DB_CONNECTION=sqlite
-DB_DATABASE=C:\Users\RohitKucheria\Downloads\url-shortner\url-shortner\database\database.sqlite      -- absolute path
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sembark_task
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 ## Clear Configuration Cache
 ```bash
